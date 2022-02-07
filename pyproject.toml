@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "non-profit-categorization"
+version = "0.1.0"
+description = "Project for collaborating around using NLP techniques to categorize non-profits based on their submitted tax descriptions"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+scipy = "^1.8.0"
+pandas = "^1.4.0"
+gensim = "^4.1.2"
+scikit-learn = "^1.0.2"
+spacy = "^3.2.1"
+nltk = "^3.6.7"
+requests = "^2.27.1"
+pyLDAvis = "^3.3.1"
+seaborn = "^0.11.2"
+matplotlib = "^3.5.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+flake8 = "^4.0.1"
+jupyter = "^1.0.0"
+notebook = "^6.4.8"
+pytest = "^7.0.0"
+isort = "^5.10.1"
+sqlfluff = "^0.9.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+src_paths = ["src", "tests"]
+multi_line_output=3
+include_trailing_comma="True"
+force_grid_wrap=0
+use_parentheses="True"
+line_length=120
+skip=".vscode, .tox, .git"
+default_section="THIRDPARTY"
+sections="FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers -v"
+markers = ["spark",
+           "unit_test",
+]
+testpaths = "tests"
+
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+  # Directories
+    \.eggs
+  | \.git
+  | \.vscode
+  | \.tox
+  | \.venv
+  | \.ropeproject
+  | build
+  | venv
+  | .*egg-info
+)/
+'''

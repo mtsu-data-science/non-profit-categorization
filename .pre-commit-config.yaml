@@ -1,0 +1,25 @@
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    - id: check-case-conflict
+    - id: check-merge-conflict
+    - id: trailing-whitespace
+    - id: check-executables-have-shebangs
+    - id: flake8
+    - id: debug-statements
+    - id: detect-private-key
+      exclude: \_spec.rb$
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+    - id: isort
+  - repo: https://github.com/ambv/black
+    rev: 22.1.0
+    hooks:
+    - id: black
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 0.9.4
+    hooks:
+      - id: sqlfluff-fix
+      - id: sqlfluff-lint
