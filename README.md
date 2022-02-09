@@ -32,8 +32,5 @@ A suggested IDE will be [VS Code](https://code.visualstudio.com/) but this is op
 Prior to running the python setup commands, the following needs to be done:
 
 * Install a Python version consistent with ">=3.10,<3.11"
-* Install poetry `pip install poetry`
-* Install pre-commit `pip install pre-commit`
-* Once the above criteria are met, run:
-  * `make install-poetry`
-  * `make install-precommit`
+* Install poetry and pre-commit `pip install poetry pre-commit`
+* Once the above criteria are met, run `make get-started`
