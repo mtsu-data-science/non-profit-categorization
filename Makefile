@@ -1,3 +1,4 @@
+
 install-precommit: ## Install and setup pre-commit hooks
 	pre-commit install
 
@@ -21,8 +22,8 @@ get-started: install-precommit install-poetry  ## Install pre-commit and poetry.
  # Self Documenting Commands                                                     #
  #################################################################################
 
- .DEFAULT_GOAL := show-help
- .PHONY: show-help
- show-help:
-     @echo "$$(tput bold)Available rules:$$(tput sgr0)"
-     @grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+.DEFAULT_GOAL := show-help
+.PHONY: show-help
+show-help:
+	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
