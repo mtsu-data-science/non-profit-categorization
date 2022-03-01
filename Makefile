@@ -17,6 +17,11 @@ poetry-remove: ## Remove a package from poetry
 get-started: install-precommit install-poetry  ## Install pre-commit and poetry. Make sure you have pip installed these dependencies already!
 	@echo "You're ready to go!"
 
+instal-sagemaker-studio-lab:
+	conda env update -f sagemaker-studio-lab-environment.yaml
+    
+get-started-lab: instal-sagemaker-studio-lab  ## Update environment in SageMaker Studio Lab for notebooks.
+	@echo "You're ready to go!"
 
  #################################################################################
  # Self Documenting Commands                                                     #

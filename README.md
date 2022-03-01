@@ -34,3 +34,8 @@ Prior to running the python setup commands, the following needs to be done:
 * Install a Python version consistent with ">=3.10,<3.11"
 * Install poetry and pre-commit `pip install poetry pre-commit`
 * Once the above criteria are met, run `make get-started`
+
+
+### Exploring SageMaker Studio Lab Support
+
+[SageMaker Studio Lab](https://studiolab.sagemaker.aws/) is a free service provided by AWS which gives access to an online notebook service for working in Python Jupyter Notebooks.  We are exploring this as an option for folks to either start with as they are getting onboarded to the project or in situations where someone does not have a powerful enough of a computer, can use this as a permanent option.  Initially this will only be intended for working in notebooks since the necessary development tools for running black, isort, pre-commit, and pytest have not yet been added.
