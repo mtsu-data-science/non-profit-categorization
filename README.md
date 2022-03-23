@@ -10,6 +10,10 @@ For this project, since non-profit organizations operate using mission statement
 
 ## Onboarding
 
+### GitHub
+
+Please see the [GitHub Onboarding Document](docs/github-onboarding.md) for how to get started with working in GitHub.
+
 ### Environment
 
 Modeling in this project will be done in Python with the environment being managed with [python-poetry](https://python-poetry.org/).
